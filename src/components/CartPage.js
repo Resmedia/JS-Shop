@@ -1,5 +1,22 @@
 Vue.component('cart-page', {
-   template: `
+  data() {
+    return {
+      mainPath: this.$root.$refs.shopHeader.$refs,
+      countries: [
+        { id: 1, name: 'USA' },
+        { id: 2, name: 'Russia' },
+        { id: 3, name: 'France' },
+        { id: 4, name: 'Greece' },
+        { id: 5, name: 'Japan' },
+      ],
+      state: [
+        { id: 0, name: "Saint-Petersburg"},
+        { id: 2, name: "Moscow"},
+        { id: 3, name: "Ekaterinburg"},
+      ]
+    };
+  },
+  template: `
    <div class="cart-page">
        <div class="cart-list">
           <div class="cart-list__column">
@@ -7,7 +24,7 @@ Vue.component('cart-page', {
                   Product Details
               </div>
               <cart-info
-                 v-for="item of $root.$refs.cart.cartItems"
+                 v-for="item of mainPath.cart.cartItems"
                  :key="item.id"
                  :cart-info="item"
                >
@@ -19,7 +36,7 @@ Vue.component('cart-page', {
                   unite Price
               </div>
               <cart-price
-                 v-for="item of $root.$refs.cart.cartItems"
+                 v-for="item of mainPath.cart.cartItems"
                  :key="item.id"
                  :cart-price="item.price"
                >
@@ -31,9 +48,10 @@ Vue.component('cart-page', {
                   Quantity
               </div>
               <cart-quantity
-                 v-for="item of $root.$refs.cart.cartItems"
+                 v-for="item of mainPath.cart.cartItems"
                  :key="item.id"
                  :cart-quantity="item.quantity"
+                 @input="item.quantity = $event > 1 ? $event : 1"
                >
                </cart-quantity>
           </div>
@@ -43,7 +61,7 @@ Vue.component('cart-page', {
                   shipping
               </div>
               <cart-shipping
-                 v-for="item of $root.$refs.cart.cartItems"
+                 v-for="item of mainPath.cart.cartItems"
                  :key="item.id"
                  :cart-sipping="item"
                >
@@ -55,7 +73,7 @@ Vue.component('cart-page', {
                   Subtotal
               </div>
               <cart-total
-                 v-for="item of $root.$refs.cart.cartItems"
+                 v-for="item of mainPath.cart.cartItems"
                  :key="item.id"
                  :cart-total="item"
                >
@@ -67,20 +85,23 @@ Vue.component('cart-page', {
                   ACTION
               </div>
               <cart-action
-                  v-for="item of $root.$refs.cart.cartItems"
+                  v-for="item of mainPath.cart.cartItems"
                   :key="item.id"
                   :cart-action="item"
-                  @remove="$root.$refs.cart.remove"
-                  @add="$root.$refs.cart.addProduct"
+                  @remove="mainPath.cart.remove"
               >
               </cart-action>
           </div>
       </div>
-      <div class="cart-block__empty" v-if="!$root.$refs.cart.cartItems.length">
+      <div class="cart-block__empty" v-if="!mainPath.cart.cartItems.length">
               Cart is empty
           </div>
       <div class="cart-buttons">
-            <button @click="$root.$refs.cart.clearCart()" class="button button-default">
+            <button
+                 @click="mainPath.cart.clearCart()"
+                 class="button button-default"
+                 v-bind:class="{'disabled': !mainPath.cart.cartItems.length }"
+                 v-bind:disabled="!mainPath.cart.cartItems.length">
                 CLEAR SHOPPING CART
             </button>
             <a href="products.html" class="button button-default">
@@ -93,27 +114,20 @@ Vue.component('cart-page', {
                     <div class="cart-order__name">
                         Shipping Adress
                     </div>
+
                     <div class="select">
-                        <label>
-                            <select required name="country">
-                                <option value="">Country</option>
-                                <option value="0">USA</option>
-                                <option value="2">Russia</option>
-                                <option value="3">France</option>
-                                <option value="4">Greece</option>
-                                <option value="5">Japan</option>
-                            </select>
-                        </label>
+                        <select-element
+                           ref="selectElement"
+                           name="Country"
+                           v-bind:options="countries"
+                        ></select-element>
                     </div>
                     <div class="select">
-                        <label>
-                            <select required disabled name="state">
-                                <option value="">State</option>
-                                <option value="0">Saint-Petersburg</option>
-                                <option value="2">Moscow</option>
-                                <option value="3">Ekaterinburg</option>
-                            </select>
-                        </label>
+                        <select-element
+                           ref="selectElement"
+                           name="State"
+                           v-bind:options="state"
+                        ></select-element>
                     </div>
                     <input class="form-control" type="number" required placeholder="Postcode / Zip" >
                     <button type="submit" class="button button-default button-quote">
@@ -138,10 +152,10 @@ Vue.component('cart-page', {
             <div class="col-md-4">
                 <div class="cart-order__item cart-order__total">
                     <div class="cart-order__sub">
-                        <span class="sub__text">Sub total</span> $ {{$root.$refs.cart.calcSum}} 
+                        <span class="sub__text">Sub total</span> $ {{mainPath.cart.calcSum}} 
                     </div>
                     <div class="cart-order__grand">
-                        <span class="grand__text">GRAND TOTAL</span> <span class="text-rose">$ {{$root.$refs.cart.calcSum}} </span>
+                        <span class="grand__text">GRAND TOTAL</span> <span class="text-rose">$ {{mainPath.cart.calcSum}} </span>
                     </div>
                     <hr />
                     <a href="checkout.html" class="button button-rose">
@@ -154,8 +168,8 @@ Vue.component('cart-page', {
   `,
 });
 Vue.component('cart-info', {
-   props: ['cartInfo'],
-   template: `
+  props: ['cartInfo'],
+  template: `
    <div class="column__item">
       <img :src="cartInfo.img" :alt="cartInfo.name" class="cart-list__image">
       <div class="cart-list__info">
@@ -184,7 +198,13 @@ Vue.component('cart-quantity', {
   props: ['cartQuantity'],
   template: `
    <div class="column__item">
-      {{cartQuantity}}
+      <input
+         min="1"
+         class="form-control"
+         type="number"
+         v-bind:value="cartQuantity"
+         v-on:input="$emit('input', $event.target.value)"
+      >
    </div>
    `,
 });
@@ -208,8 +228,7 @@ Vue.component('cart-action', {
   props: ['cartAction'],
   template: `
    <div class="column__item">
-      <span @click="$emit('remove', cartAction)" class="icon">-</span>
-      <span @click="$emit('add', cartAction)" class="icon">+</span>
+      <i @click="$emit('remove', cartAction)" class="icon-times-circle text-gray"></i>
    </div>
    `,
 });

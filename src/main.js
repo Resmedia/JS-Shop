@@ -27,7 +27,9 @@ const app = new Vue({
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(data),
-        }).then(response => response.json()).catch(error => this.$refs.error.setError(error));
+        })
+        .then(response => response.json())
+        .catch(error => this.$refs.error.setError(error));
 
       } else {
         return await fetch(url).

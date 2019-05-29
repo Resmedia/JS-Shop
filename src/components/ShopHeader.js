@@ -23,7 +23,7 @@ Vue.component('shop-header', {
             <div class="header__left brand">
                 <img class="logo" src="./images/logo.svg" alt="logo"/>
                 <div class="main-name">
-                    <a class="#" href="../js" title="Main Page">
+                    <a class="#" href="/" title="Main Page">
                         BRAN<span class="text-rose">D</span>
                     </a>
                 </div>

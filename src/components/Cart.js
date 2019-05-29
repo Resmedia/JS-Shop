@@ -8,10 +8,10 @@ Vue.component('cart', {
   },
   computed: {
     calcSum() {
-      return this.cartItems.reduce((accum, item) => accum += item.price * item.quantity, 0);
+      return this.cartItems.reduce((accum, item) => accum += +item.price * +item.quantity, 0);
     },
     calcQuantity() {
-      return this.cartItems.reduce((accum, item) => accum += item.quantity, 0);
+      return this.cartItems.reduce((accum, item) => accum += +item.quantity, 0);
     },
   },
   mounted() {

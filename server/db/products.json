@@ -9,7 +9,8 @@
     "section": "Jackets & Coats",
     "color": "bleak",
     "price": 52,
-    "main": 0
+    "main": 0,
+    "similar": 0
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "section": "Jackets & Coats",
     "color": "gray",
     "price": 130,
-    "main": 0
+    "main": 0,
+    "similar": 0
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "section": "Bags",
     "color": "white",
     "price": 180,
-    "main": 1
+    "main": 1,
+    "similar": 0
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "section": "T-Shirts",
     "color": "brown",
     "price": 52,
-    "main": 0
+    "main": 0,
+    "similar": 0
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "section": "Shorts",
     "color": "white",
     "price": 95,
-    "main": 1
+    "main": 1,
+    "similar": 0
   },
   {
     "id": 6,
@@ -68,7 +73,8 @@
     "name": "Jacket Indigo",
     "section": "Jackets & Coats",
     "color": "blue",
-    "price": 130
+    "price": 130,
+    "similar": 0
   },
   {
     "id": 7,
@@ -80,7 +86,8 @@
     "section": "Accessories",
     "color": "blue",
     "price": 30,
-    "main": 1
+    "main": 1,
+    "similar": 0
   },
   {
     "id": 8,
@@ -92,7 +99,8 @@
     "section": "Jackets & Coats",
     "color": "gray",
     "price": 190,
-    "main": 0
+    "main": 0,
+    "similar": 0
   },
   {
     "id": 9,
@@ -104,7 +112,8 @@
     "section": "T-Shirts",
     "color": "blue",
     "price": 70,
-    "main": 0
+    "main": 0,
+    "similar": 0
   },
   {
     "id": 10,
@@ -116,7 +125,8 @@
     "section": "T-Shirts",
     "color": "red",
     "price": 170,
-    "main": 1
+    "main": 1,
+    "similar": 0
   },
   {
     "id": 11,
@@ -128,7 +138,8 @@
     "section": "T-Shirts",
     "color": "white",
     "price": 200,
-    "main": 1
+    "main": 1,
+    "similar": 0
   },
   {
     "id": 12,
@@ -140,7 +151,8 @@
     "section": "T-Shirts",
     "color": "white",
     "price": 150,
-    "main": 1
+    "main": 1,
+    "similar": 0
   },
   {
     "id": 13,
@@ -152,7 +164,8 @@
     "section": "Shorts",
     "color": "white",
     "price": 110,
-    "main": 1
+    "main": 1,
+    "similar": 0
   },
   {
     "id": 14,
@@ -164,6 +177,59 @@
     "section": "T-Shirts",
     "color": "white",
     "price": 230,
-    "main": 1
+    "main": 1,
+    "similar": 0
+  },
+  {
+    "id": 15,
+    "brand": null,
+    "sex": "Women",
+    "designer": "Binburhan",
+    "img": "/images/featured_view1.jpg",
+    "name": "Black magnet",
+    "section": "Suit",
+    "color": "black",
+    "price": 340,
+    "main": 0,
+    "similar": 1
+  },
+  {
+    "id": 16,
+    "brand": null,
+    "sex": "Women",
+    "designer": "Binburhan",
+    "img": "/images/featured_view2.jpg",
+    "name": "Indigo",
+    "section": "Skirt",
+    "color": "white",
+    "price": 130,
+    "main": 0,
+    "similar": 1
+  },
+  {
+    "id": 17,
+    "brand": null,
+    "sex": "Women",
+    "designer": "Binburhan",
+    "img": "/images/featured_view3.jpg",
+    "name": "Vendetto",
+    "section": "Trousers",
+    "color": "brown",
+    "price": 165,
+    "main": 0,
+    "similar": 1
+  },
+  {
+    "id": 18,
+    "brand": null,
+    "sex": "Women",
+    "designer": "Binburhan",
+    "img": "/images/featured_view4.jpg",
+    "name": "Warner",
+    "section": "Blouse",
+    "color": "gray",
+    "price": 138,
+    "main": 0,
+    "similar": 1
   }
 ]
