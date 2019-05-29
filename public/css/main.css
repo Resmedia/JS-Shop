@@ -564,7 +564,7 @@ input:-moz-placeholder {
       border: 1px solid #e6e6e6; }
       .select.select-sort .select-items div:hover {
         background: #e6e6e6; }
-  .select.mega-select .select-items {
+  .select.select-mega .select-items {
     width: 262px;
     padding: 20px;
     background: #ffffff;
@@ -573,7 +573,7 @@ input:-moz-placeholder {
     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
     -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); }
-    .select.mega-select .select-items:before {
+    .select.select-mega .select-items:before {
       content: "";
       position: absolute;
       width: 10px;
@@ -585,22 +585,21 @@ input:-moz-placeholder {
       height: 10px;
       background: #ffffff;
       transform: rotate(45deg); }
-  .select.mega-select .select__option {
-    white-space: pre-wrap;
+  .select.select-mega .select__option {
     background: #ffffff;
     border: transparent;
     margin: 0px -1px 0px 0px;
     cursor: pointer; }
-    .select.mega-select .select__option:hover {
+    .select.select-mega .select__option:hover {
       background-color: transparent;
       color: #f16d7f; }
-    .select.mega-select .select__option.select__section-name {
+    .select.select-mega .select__option.select__section-name {
       white-space: nowrap;
       margin: 5px -5px 0;
       font-weight: 400;
       text-transform: uppercase;
       border-bottom: 1px solid #cdcdcc; }
-      .select.mega-select .select__option.select__section-name:first-child {
+      .select.select-mega .select__option.select__section-name:first-child {
         margin: -10px -5px 0; }
   .select .square-blue:before,
   .select .square-green:before,
@@ -2065,5 +2064,10 @@ footer .copyright {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase; }
+
+.disabled {
+  touch-action: none;
+  cursor: not-allowed;
+  opacity: 0.7; }
 
 /*# sourceMappingURL=main.css.map */
