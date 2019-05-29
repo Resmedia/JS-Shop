@@ -13,12 +13,13 @@
     ]
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Evgenii Rogozhuk <resmedia@ya.ru>",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.17.0",
     "moment": "^2.24.0",
     "nodemon": "*",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-select": "^3.1.0"
   }
 }
