@@ -21,4 +21,14 @@ app.get('/api/products', (req, res) => {
     })
 });
 
+app.get('/api/menu', (req, res) => {
+  fs.readFile('server/db/menu.json', 'utf8', (err, data) => {
+    if(err){
+      res.sendStatus(404, JSON.stringify({result: 0, text: err}));
+    } else {
+      res.send(data);
+    }
+  })
+});
+
 app.listen(3000, () => console.log('Express start...'));

@@ -1,0 +1,783 @@
+[
+  {
+    "id": 1,
+    "name": "Man",
+    "data": [
+      {
+        "sectionId": 1,
+        "section": "Man",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          },
+          {
+            "id": 5,
+            "name": "Blazers",
+            "url": "/products.html"
+          },
+          {
+            "id": 6,
+            "name": "Denim",
+            "url": "/products.html"
+          },
+          {
+            "id": 7,
+            "name": "Leggings/Pants",
+            "url": "/products.html"
+          },
+          {
+            "id": 8,
+            "name": "Skirts/Shorts",
+            "url": "/products.html"
+          },
+          {
+            "id": 9,
+            "name": "Accessories",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 2,
+        "section": "Man",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 3,
+        "section": "Man",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 4,
+        "section": "Man",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Women",
+    "data": [
+      {
+        "sectionId": 1,
+        "section": "Women",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          },
+          {
+            "id": 5,
+            "name": "Blazers",
+            "url": "/products.html"
+          },
+          {
+            "id": 6,
+            "name": "Denim",
+            "url": "/products.html"
+          },
+          {
+            "id": 7,
+            "name": "Leggings/Pants",
+            "url": "/products.html"
+          },
+          {
+            "id": 8,
+            "name": "Skirts/Shorts",
+            "url": "/products.html"
+          },
+          {
+            "id": 9,
+            "name": "Accessories",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 2,
+        "section": "Women",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 3,
+        "section": "Women",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 4,
+        "section": "Women",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Kids",
+    "data": [
+      {
+        "sectionId": 1,
+        "section": "Kids",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          },
+          {
+            "id": 5,
+            "name": "Blazers",
+            "url": "/products.html"
+          },
+          {
+            "id": 6,
+            "name": "Denim",
+            "url": "/products.html"
+          },
+          {
+            "id": 7,
+            "name": "Leggings/Pants",
+            "url": "/products.html"
+          },
+          {
+            "id": 8,
+            "name": "Skirts/Shorts",
+            "url": "/products.html"
+          },
+          {
+            "id": 9,
+            "name": "Accessories",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 2,
+        "section": "Kids",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 3,
+        "section": "Kids",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 4,
+        "section": "Kids",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Accessories",
+    "data": [
+      {
+        "sectionId": 1,
+        "section": "Accessories",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          },
+          {
+            "id": 5,
+            "name": "Blazers",
+            "url": "/products.html"
+          },
+          {
+            "id": 6,
+            "name": "Denim",
+            "url": "/products.html"
+          },
+          {
+            "id": 7,
+            "name": "Leggings/Pants",
+            "url": "/products.html"
+          },
+          {
+            "id": 8,
+            "name": "Skirts/Shorts",
+            "url": "/products.html"
+          },
+          {
+            "id": 9,
+            "name": "Accessories",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 2,
+        "section": "Accessories",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 3,
+        "section": "Accessories",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 4,
+        "section": "Accessories",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Featured",
+    "data": [
+      {
+        "sectionId": 1,
+        "section": "Featured",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          },
+          {
+            "id": 5,
+            "name": "Blazers",
+            "url": "/products.html"
+          },
+          {
+            "id": 6,
+            "name": "Denim",
+            "url": "/products.html"
+          },
+          {
+            "id": 7,
+            "name": "Leggings/Pants",
+            "url": "/products.html"
+          },
+          {
+            "id": 8,
+            "name": "Skirts/Shorts",
+            "url": "/products.html"
+          },
+          {
+            "id": 9,
+            "name": "Accessories",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 2,
+        "section": "Featured",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 3,
+        "section": "Featured",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 4,
+        "section": "Featured",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Hot deals",
+    "data": [
+      {
+        "sectionId": 1,
+        "section": "Hot deals",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          },
+          {
+            "id": 5,
+            "name": "Blazers",
+            "url": "/products.html"
+          },
+          {
+            "id": 6,
+            "name": "Denim",
+            "url": "/products.html"
+          },
+          {
+            "id": 7,
+            "name": "Leggings/Pants",
+            "url": "/products.html"
+          },
+          {
+            "id": 8,
+            "name": "Skirts/Shorts",
+            "url": "/products.html"
+          },
+          {
+            "id": 9,
+            "name": "Accessories",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 2,
+        "section": "Hot deals",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 3,
+        "section": "Hot deals",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          }
+        ]
+      },
+      {
+        "sectionId": 4,
+        "section": "Hot deals",
+        "sectionData": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "url": "/products.html"
+          },
+          {
+            "id": 2,
+            "name": "Tops",
+            "url": "/products.html"
+          },
+          {
+            "id": 3,
+            "name": "Sweaters/Knits",
+            "url": "/products.html"
+          },
+          {
+            "id": 4,
+            "name": "Jackets/Coats",
+            "url": "/products.html"
+          }
+        ]
+      }
+    ]
+  }
+]
+

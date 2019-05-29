@@ -1443,9 +1443,39 @@ section.range-slider {
 			 border: 1px solid $borderGray;
 			 @include shadow(0 3px 6px rgba(0, 0, 0, 0.08));
 
+			 ul {
+				list-style: none;
+				display: grid;
+				grid-template-columns: repeat(3, 0fr);
+				grid-template-rows: repeat(2, 160px);
+				grid-gap: 20px;
+
+				li {
+				  display: block;
+
+				  a {
+					 line-height: 28px;
+					 font-weight: 400;
+					 color: $darkGray;
+
+					 &:hover {
+						color: $rose;
+					 }
+				  }
+				}
+			 }
+
 			 .nav__drop-section {
 				width: 235px;
 				margin-right: 46px;
+
+				&:first-child {
+				  grid-row: 1 / span 2;
+				}
+
+				ul{
+				  display: block;
+				}
 
 				&:last-child {
 				  margin-right: 0;
@@ -1461,25 +1491,6 @@ section.range-slider {
 
 				  &:first-child {
 					 margin-top: 0;
-				  }
-				}
-			 }
-
-			 ul {
-				list-style: none;
-				display: block;
-
-				li {
-				  display: block;
-
-				  a {
-					 line-height: 28px;
-					 font-weight: 400;
-					 color: $darkGray;
-
-					 &:hover {
-						color: $rose;
-					 }
 				  }
 				}
 			 }

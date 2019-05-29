@@ -1119,9 +1119,27 @@ section.range-slider {
           -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
           -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); }
+          .nav ul li .nav__link .nav__drop-menu ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 0fr);
+            grid-template-rows: repeat(2, 160px);
+            grid-gap: 20px; }
+            .nav ul li .nav__link .nav__drop-menu ul li {
+              display: block; }
+              .nav ul li .nav__link .nav__drop-menu ul li a {
+                line-height: 28px;
+                font-weight: 400;
+                color: #838383; }
+                .nav ul li .nav__link .nav__drop-menu ul li a:hover {
+                  color: #f16d7f; }
           .nav ul li .nav__link .nav__drop-menu .nav__drop-section {
             width: 235px;
             margin-right: 46px; }
+            .nav ul li .nav__link .nav__drop-menu .nav__drop-section:first-child {
+              grid-row: 1 / span 2; }
+            .nav ul li .nav__link .nav__drop-menu .nav__drop-section ul {
+              display: block; }
             .nav ul li .nav__link .nav__drop-menu .nav__drop-section:last-child {
               margin-right: 0; }
             .nav ul li .nav__link .nav__drop-menu .nav__drop-section .drop-section__name {
@@ -1133,17 +1151,6 @@ section.range-slider {
               margin-top: 9px; }
               .nav ul li .nav__link .nav__drop-menu .nav__drop-section .drop-section__name:first-child {
                 margin-top: 0; }
-          .nav ul li .nav__link .nav__drop-menu ul {
-            list-style: none;
-            display: block; }
-            .nav ul li .nav__link .nav__drop-menu ul li {
-              display: block; }
-              .nav ul li .nav__link .nav__drop-menu ul li a {
-                line-height: 28px;
-                font-weight: 400;
-                color: #838383; }
-                .nav ul li .nav__link .nav__drop-menu ul li a:hover {
-                  color: #f16d7f; }
           .nav ul li .nav__link .nav__drop-menu .drop-section__sale {
             display: block;
             margin: 22px -4px 0 -17px;
