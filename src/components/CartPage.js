@@ -51,6 +51,7 @@ Vue.component('cart-page', {
                  v-for="item of mainPath.cart.cartItems"
                  :key="item.id"
                  :cart-quantity="item.quantity"
+                 @input="item.quantity = $event > 1 ? $event : 1"
                >
                </cart-quantity>
           </div>
@@ -88,7 +89,6 @@ Vue.component('cart-page', {
                   :key="item.id"
                   :cart-action="item"
                   @remove="mainPath.cart.remove"
-                  @add="mainPath.cart.addProduct"
               >
               </cart-action>
           </div>
@@ -198,7 +198,13 @@ Vue.component('cart-quantity', {
   props: ['cartQuantity'],
   template: `
    <div class="column__item">
-      {{cartQuantity}}
+      <input
+         min="1"
+         class="form-control"
+         type="number"
+         v-bind:value="cartQuantity"
+         v-on:input="$emit('input', $event.target.value)"
+      >
    </div>
    `,
 });
@@ -222,8 +228,7 @@ Vue.component('cart-action', {
   props: ['cartAction'],
   template: `
    <div class="column__item">
-      <span @click="$emit('remove', cartAction)" class="icon">-</span>
-      <span @click="$emit('add', cartAction)" class="icon">+</span>
+      <i @click="$emit('remove', cartAction)" class="icon-times-circle text-gray"></i>
    </div>
    `,
 });

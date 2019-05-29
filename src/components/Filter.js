@@ -92,7 +92,7 @@ Vue.component('filter-el', {
     };
   },
   template: `
-      <form action="#" class="form-group" @submit.prevent="$parent.$refs.products.filter(userSearch)">
+      <form action="" class="form-group" @submit.prevent="$parent.$parent.$refs.catalog.filter(userSearch)">
          <div class="select select-mega">
          <select-element
             ref="selectElement"
@@ -100,7 +100,7 @@ Vue.component('filter-el', {
             v-bind:options="options"
          ></select-element>
          </div>
-         <input required placeholder="Search for Item..." class="form-control search" v-model="userSearch"/>
+         <input placeholder="Search for Item..." class="form-control search" v-model="userSearch"/>
          <button type="submit" class="button button-white">
              <i class="icon-search"></i>
          </button>

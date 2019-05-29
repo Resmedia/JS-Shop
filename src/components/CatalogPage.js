@@ -17,13 +17,13 @@ Vue.component('catalog', {
   methods: {
     filter(value) {
       let regexp = new RegExp(value, 'i');
-      this.filtered = this.products.filter(el => regexp.test(el.product_name));
+      this.filtered = this.products.filter(el => regexp.test(el.name));
     },
   },
   template: `
       <div class="catalog__items row-15">
           <product
-             v-for="product of products"
+             v-for="product of filtered"
              :key="product.id"
              :product="product"
           >

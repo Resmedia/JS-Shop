@@ -1,4 +1,32 @@
 Vue.component('view-page', {
+  data(){
+    return {
+      color: [
+        {
+          id: 1,
+          className: 'square-red',
+          name: 'Red',
+        },
+        {
+          id: 2,
+          className: 'square-blue',
+          name: 'Blue',
+        },
+        {
+          id: 3,
+          className: 'square-green',
+          name: 'Green',
+        },
+      ],
+      size: [
+        { id: 1, name: "XXL"},
+        { id: 2, name: "XL"},
+        { id: 3, name: "L"},
+        { id: 4, name: "M"},
+        { id: 5, name: "S"},
+      ],
+    }
+  },
   template: `
   <div class="arrival-view">
       <div class="arrival__slider">
@@ -43,14 +71,11 @@ Vue.component('view-page', {
                                 CHOOSE COLOR
                             </div>
                             <div class="select select-default">
-                                <label>
-                                    <select name="color" required>
-                                        <option value="">Choose</option>
-                                        <option class="square-red" value="1">Red</option>
-                                        <option class="square-blue" value="2">Blue</option>
-                                        <option class="square-green" value="3">Green</option>
-                                    </select>
-                                </label>
+                                <select-element
+                                  ref="selectElement"
+                                  name="Choose"
+                                  v-bind:options="color"
+                                ></select-element>
                             </div>
                         </div>
                         <div class="select-item">
@@ -58,16 +83,11 @@ Vue.component('view-page', {
                                 CHOOSE SIZE
                             </div>
                             <div class="select select-default">
-                                <label>
-                                    <select name="size" required>
-                                        <option value="">Choose</option>
-                                        <option value="1">XXL</option>
-                                        <option value="2">XL</option>
-                                        <option value="3">L</option>
-                                        <option value="4">M</option>
-                                        <option value="5">S</option>
-                                    </select>
-                                </label>
+                                <select-element
+                                  ref="selectElement"
+                                  name="Choose"
+                                  v-bind:options="size"
+                                ></select-element>
                             </div>
                         </div>
                         <div class="select-item">

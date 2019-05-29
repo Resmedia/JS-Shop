@@ -31,7 +31,7 @@ Vue.component('option-element', {
     };
   },
   template: `
-  <div class="select__option" v-bind:class="{ 'select__section-name': section }">
+  <div class="select__option" v-bind:class="[ section ? 'select__section-name' : '', option.className ? option.className : '' ]">
       {{option.name}}
   </div>
   `,
