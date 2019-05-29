@@ -1,16 +1,29 @@
 Vue.component('shop-header', {
-   data(){
-      return {
-        showMenu: false,
-      }
-   },
-   template: `
-   <header class="header">
-        <div class="container header__content">
+  data() {
+    return {
+      showMenu: false,
+      scrollEvent: false,
+    };
+  },
+  mounted() {
+    document.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    document.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.scrollEvent = window.scrollY > 150;
+    },
+  },
+  template: `
+   <header class="header" v-bind:class="{ fixed: scrollEvent }">
+      <div class="header__wrap">
+          <div class="container header__content">
             <div class="header__left brand">
                 <img class="logo" src="./images/logo.svg" alt="logo"/>
                 <div class="main-name">
-                    <a class="#" href="./" title="Main Page">
+                    <a class="#" href="../js" title="Main Page">
                         BRAN<span class="text-rose">D</span>
                     </a>
                 </div>
@@ -37,6 +50,7 @@ Vue.component('shop-header', {
                 </div>
             </div>
         </div>
+      </div>
     </header>
   `,
 });

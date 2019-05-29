@@ -1176,6 +1176,25 @@ section.range-slider {
 .header {
   @include shadow(0 0 10px rgba(0, 0, 0, 0.17));
   border: 1px solid #ececec;
+  .header__wrap{
+    top: -100px;
+    @include transition(300ms)
+  }
+
+  &.fixed {
+    position: relative;
+    height: 100px;
+    .header__wrap{
+      @include transition(300ms);
+      @include shadow(0 0 10px rgba(0, 0, 0, 0.17));
+      background: $white;
+      top: 0;
+      position: fixed;
+      z-index: 1000;
+      width: 100%;
+
+    }
+  }
 
   .header__content {
     display: flex;

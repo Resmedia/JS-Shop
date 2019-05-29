@@ -7,6 +7,9 @@ app.use(express.json());
 app.use('/', express.static('public'));
 app.use('/api/cart', cart);
 app.use('/js/vue.js', express.static('node_modules/vue/dist/vue.js'));
+app.use('/js', express.static('src/components'));
+app.use('/js/main.js', express.static('src/main.js'));
+
 
 app.get('/api/products', (req, res) => {
     fs.readFile('server/db/products.json', 'utf8', (err, data) => {

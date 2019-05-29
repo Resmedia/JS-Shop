@@ -6,7 +6,7 @@ Vue.component('products-main', {
       };
    },
    mounted() {
-      this.$parent.getJson(this.apiProducts)
+      this.$root.getJson(this.apiProducts)
          .then(data => {
             for (let el of data) {
                if(el.main){
@@ -44,7 +44,7 @@ Vue.component('product', {
           <div class="featured__item">
               <div class="image-wrapper">
                   <div class="featured__buttons">
-                      <button  @click="$root.$refs.cart.addProduct(product)" class="button button-transparent">
+                      <button  @click="$root.$refs.shopHeader.$refs.cart.addProduct(product)" class="button button-transparent">
                           <img alt="basket" class="basket" src="./images/basket_white.svg">
                           Add to Cart
                       </button>

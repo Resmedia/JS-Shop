@@ -915,6 +915,32 @@ section.range-slider {
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
   border: 1px solid #ececec; }
+  .header .header__wrap {
+    top: -100px;
+    -webkit-transition: 300ms;
+    -khtml-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms; }
+  .header.fixed {
+    position: relative;
+    height: 100px; }
+    .header.fixed .header__wrap {
+      -webkit-transition: 300ms;
+      -khtml-transition: 300ms;
+      -moz-transition: 300ms;
+      -ms-transition: 300ms;
+      -o-transition: 300ms;
+      transition: 300ms;
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+      background: #ffffff;
+      top: 0;
+      position: fixed;
+      z-index: 1000;
+      width: 100%; }
   .header .header__content {
     display: flex;
     justify-content: space-between;
