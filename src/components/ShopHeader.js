@@ -1,20 +1,20 @@
-Vue.component('shop-header', {
+Vue.component("shop-header", {
   data() {
     return {
       showMenu: false,
-      scrollEvent: false,
+      scrollEvent: false
     };
   },
   mounted() {
-    document.addEventListener('scroll', this.handleScroll);
+    document.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
-    document.removeEventListener('scroll', this.handleScroll);
+    document.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
     handleScroll() {
       this.scrollEvent = window.scrollY > 150;
-    },
+    }
   },
   template: `
    <header class="header" v-bind:class="{ fixed: scrollEvent }">
@@ -52,5 +52,5 @@ Vue.component('shop-header', {
         </div>
       </div>
     </header>
-  `,
+  `
 });

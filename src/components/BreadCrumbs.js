@@ -1,8 +1,8 @@
-Vue.component('bread-crumbs', {
-  props: ['section', 'crumbs'],
+Vue.component("bread-crumbs", {
+  props: ["section", "crumbs"],
   template: `
-  <div class="catalog-nav">
-    <div class="container">
+   <div class="catalog-nav">
+     <div class="container">
         <h1 class="catalog-nav__left text-rose">
             {{section}}
         </h1>
@@ -23,11 +23,11 @@ Vue.component('bread-crumbs', {
         </nav>
     </div>
 </div>
-  `,
+  `
 });
 
-Vue.component('crumb', {
-  props: ['crumb'],
+Vue.component("crumb", {
+  props: ["crumb"],
   template: `
   <li>
      <a v-if="crumb.url" :href="crumb.url" class="breadcrumbs_item">
@@ -37,5 +37,5 @@ Vue.component('crumb', {
           {{crumb.name}}
      </span>
   </li>
-  `,
+  `
 });

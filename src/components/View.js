@@ -1,31 +1,31 @@
-Vue.component('view-page', {
-  data(){
+Vue.component("view-page", {
+  data() {
     return {
       color: [
         {
           id: 1,
-          className: 'square-red',
-          name: 'Red',
+          className: "square-red",
+          name: "Red"
         },
         {
           id: 2,
-          className: 'square-blue',
-          name: 'Blue',
+          className: "square-blue",
+          name: "Blue"
         },
         {
           id: 3,
-          className: 'square-green',
-          name: 'Green',
-        },
+          className: "square-green",
+          name: "Green"
+        }
       ],
       size: [
-        { id: 1, name: "XXL"},
-        { id: 2, name: "XL"},
-        { id: 3, name: "L"},
-        { id: 4, name: "M"},
-        { id: 5, name: "S"},
-      ],
-    }
+        { id: 1, name: "XXL" },
+        { id: 2, name: "XL" },
+        { id: 3, name: "L" },
+        { id: 4, name: "M" },
+        { id: 5, name: "S" }
+      ]
+    };
   },
   template: `
   <div class="arrival-view">
@@ -116,5 +116,5 @@ Vue.component('view-page', {
         </div>
     </div>
   </div>
-  `,
+  `
 });

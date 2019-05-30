@@ -1,13 +1,12 @@
-Vue.component('shop-menu', {
+Vue.component("shop-menu", {
   data() {
     return {
-      apiMenu: '/api/menu',
-      menuSite: [],
+      apiMenu: "/api/menu",
+      menuSite: []
     };
   },
   mounted() {
-    this.$root.getJson(this.apiMenu)
-    .then(data => {
+    this.$root.getJson(this.apiMenu).then(data => {
       for (let el of data) {
         this.menuSite.push(el);
       }
@@ -29,11 +28,11 @@ Vue.component('shop-menu', {
           </menu-one>
       </ul>
    </nav>
-  `,
+  `
 });
 
-Vue.component('menu-one', {
-  props: ['menu'],
+Vue.component("menu-one", {
+  props: ["menu"],
   template: `
   <li>
       <div class="nav__link">
@@ -56,11 +55,11 @@ Vue.component('menu-one', {
           </nav>
       </div>
   </li>
-  `,
+  `
 });
 
-Vue.component('sub-menu', {
-  props: ['subMenu'],
+Vue.component("sub-menu", {
+  props: ["subMenu"],
   template: `
       <div class="nav__drop-section">
            <h3 class="drop-section__name">
@@ -75,19 +74,18 @@ Vue.component('sub-menu', {
                </last-item>
            </ul>
       </div>
-  `,
+  `
 });
-Vue.component('last-item', {
-  props: ['lastItem'],
+Vue.component("last-item", {
+  props: ["lastItem"],
   template: `
       <li>
           <a :href="lastItem.url" class="drop-section__link">
               {{lastItem.name}}
           </a>
       </li>
-  `,
+  `
 });
-
 
 /*
 * <li>

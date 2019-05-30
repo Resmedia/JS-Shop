@@ -1,26 +1,24 @@
-Vue.component('products', {
-  props: ['type', 'column', 'pager'],
+Vue.component("products", {
+  props: ["type", "column", "pager"],
   data() {
     return {
-      apiProducts: '/api/products',
+      apiProducts: "/api/products",
       products: [],
       filtered: [],
       currentPage: 0,
       itemsPerPage: 6,
-      resultCount: 0,
+      resultCount: 0
     };
   },
   mounted() {
-    this.$parent.getJson(this.apiProducts)
-    .then(data => {
+    this.$parent.getJson(this.apiProducts).then(data => {
       for (let item of data) {
-
         if (!!this.type && item[this.type]) {
           this.products.push(item);
           this.filtered.push(item);
         }
 
-        if (!this.type){
+        if (!this.type) {
           this.products.push(item);
           this.filtered.push(item);
         }
@@ -29,15 +27,15 @@ Vue.component('products', {
   },
   computed: {
     totalPages() {
-      return Math.ceil(this.resultCount / this.itemsPerPage)
-    },
+      return Math.ceil(this.resultCount / this.itemsPerPage);
+    }
   },
   methods: {
     filter(value) {
-      let regexp = new RegExp(value, 'i');
+      let regexp = new RegExp(value, "i");
       this.filtered = this.products.filter(el => regexp.test(el.name));
     },
-    setPage(pageNumber){
+    setPage(pageNumber) {
       this.currentPage = pageNumber;
     },
     pagination(list) {
@@ -48,7 +46,7 @@ Vue.component('products', {
 
       const index = this.currentPage * this.itemsPerPage;
       return list.slice(index, index + this.itemsPerPage);
-    },
+    }
   },
   template: `
       <div class="products">
@@ -93,10 +91,10 @@ Vue.component('products', {
               </div>
           </div>
       </div>
-   `,
+   `
 });
-Vue.component('product', {
-  props: ['product', 'type', 'column'],
+Vue.component("product", {
+  props: ["product", "type", "column"],
   template: `
       <div v-bind:class="column"> 
           <div class="products__item">
@@ -128,5 +126,5 @@ Vue.component('product', {
               </div>
           </div>
       </div>       
-   `,
+   `
 });
