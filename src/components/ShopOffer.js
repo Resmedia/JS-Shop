@@ -1,5 +1,5 @@
-Vue.component('shop-offer', {
-   template: `
+Vue.component("shop-offer", {
+  template: `
    <section class="main-block__offer">
        <div class="row-10">
            <div class="col-md-6">
@@ -52,5 +52,5 @@ Vue.component('shop-offer', {
            </div>
        </div>
    </section>
-  `,
+  `
 });

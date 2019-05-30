@@ -27,7 +27,20 @@
         ></bread-crumbs>
         <section class="arrival">
             <view-page ref="view"></view-page>
-            <similar-items ref="similarItems"></similar-items>
+            <div class="container">
+                 <div class="featured-name">
+                      you may like also
+                 </div>
+                <div class="featured">
+                     <products
+                           ref="products"
+                           column="col-md-3"
+                           type="similar"
+                     >
+                     </products>
+                </div>
+            </div>
+            
         </section>
         <main-additions ref="mainAdditions"></main-additions>
     </div>
@@ -42,7 +55,7 @@
 <script src="/js/MainAdditions.js"></script>
 <script src="/js/ShopFooter.js"></script>
 <script src="/js/View.js"></script>
-<script src="/js/SimilarItems.js"></script>
+<script src="/js/Products.js"></script>
 
 <script src="/js/BreadCrumbs.js"></script>
 <script src="/js/Filter.js"></script>

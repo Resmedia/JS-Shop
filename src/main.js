@@ -1,40 +1,40 @@
 const app = new Vue({
-  el: '#app',
+  el: "#app",
   data: {
-    userSearch: '',
-    removeAll: '/api/cart/all-remove',
-    methodGet: 'GET',
-    methodPost: 'POST',
-    methodPut: 'PUT',
-    methodDelete: 'DELETE',
+    userSearch: "",
+    removeAll: "/api/cart/all-remove",
+    methodGet: "GET",
+    methodPost: "POST",
+    methodPut: "PUT",
+    methodDelete: "DELETE"
   },
   methods: {
     async processJson(url, data, method) {
-
       if (url === this.removeAll && method === this.methodDelete) {
         return fetch(url, {
           method: method,
           headers: {
-            'Content-Type': 'application/json',
-          },
-        }).then(response => response.json()).catch(error => this.$refs.error.setError(error));
+            "Content-Type": "application/json"
+          }
+        })
+          .then(response => response.json())
+          .catch(error => this.$refs.error.setError(error));
       }
 
       if (method !== this.methodGet) {
         return fetch(url, {
           method: method,
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json"
           },
-          body: JSON.stringify(data),
+          body: JSON.stringify(data)
         })
-        .then(response => response.json())
-        .catch(error => this.$refs.error.setError(error));
-
+          .then(response => response.json())
+          .catch(error => this.$refs.error.setError(error));
       } else {
-        return await fetch(url).
-          then(result => result.json()).
-          catch(error => this.$refs.error.setError(error));
+        return await fetch(url)
+          .then(result => result.json())
+          .catch(error => this.$refs.error.setError(error));
       }
     },
     getJson(url) {
@@ -51,6 +51,6 @@ const app = new Vue({
     },
     clearJson(url) {
       return this.processJson(url, null, this.methodDelete);
-    },
-  },
+    }
+  }
 });

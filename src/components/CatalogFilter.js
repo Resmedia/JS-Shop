@@ -1,10 +1,8 @@
-Vue.component('catalog-filter', {
-   data() {
-      return {
-
-      };
-   },
-   template: `
+Vue.component("catalog-filter", {
+  data() {
+    return {};
+  },
+  template: `
       <div class="catalog-search">
           <div class="catalog__filter">
               <div class="catalog__filter-item">
@@ -137,6 +135,5 @@ Vue.component('catalog-filter', {
               </div>
           </div>
       </div>
-   `,
+   `
 });
-

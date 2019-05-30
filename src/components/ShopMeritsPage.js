@@ -1,5 +1,5 @@
-Vue.component('shop-merits-page', {
-   template: `
+Vue.component("shop-merits-page", {
+  template: `
    <section class="page-block__special">
     <div class="container">
         <div class="special__offers">
@@ -44,5 +44,5 @@ Vue.component('shop-merits-page', {
         </div>
     </div>
 </section>
-  `,
+  `
 });

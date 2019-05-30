@@ -1,5 +1,5 @@
-Vue.component('main-slider', {
-   template: `
+Vue.component("main-slider", {
+  template: `
    <div class="slider-block">
        <div class="container">
            <div class="slider-block__slogan">
@@ -13,5 +13,5 @@ Vue.component('main-slider', {
            <div class="slider-block__image"></div>
        </div>
    </div>
-  `,
+  `
 });

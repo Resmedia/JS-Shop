@@ -1,5 +1,5 @@
-Vue.component('main-additions', {
-   template: `
+Vue.component("main-additions", {
+  template: `
    <section class="main-additions">
         <div class="container">
             <div class="col-md-6">
@@ -36,5 +36,5 @@ Vue.component('main-additions', {
             </div>
         </div>
     </section>
-  `,
+  `
 });

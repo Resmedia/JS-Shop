@@ -1204,6 +1204,7 @@ section.range-slider {
 	 height: 100px;
 
 	 .header__left {
+		display: flex;
 		.form-group {
 		  margin-left: 37px;
 
@@ -1601,6 +1602,18 @@ section.range-slider {
 		color: $darkGray;
 		padding: 0 8px;
 
+		&.current {
+		  color: $rose;
+		}
+
+		&.first::after {
+		  content:'...'
+		}
+
+		&.last::before {
+		  content:'...'
+		}
+
 		.icon {
 		  font-size: 12px;
 		}
@@ -1760,25 +1773,35 @@ section.range-slider {
   }
 }
 
-.featured__item {
+.products__item {
   overflow: hidden;
   margin: 15px;
-
   .image-wrapper {
 	 position: relative;
+	 z-index: 3;
 	 display: block;
 	 @include transition(all 300ms linear);
 
-	 .featured__image {
+	 .active-zone{
+		position: absolute;
+		content: "";
+		display: block;
+		z-index: 3;
+		width: 100%;
+		height: 100%;
+	 }
+
+	 .products__image {
+		display: block;
 		width: 100%;
 		height: 280px;
 		background-repeat: no-repeat;
 		background-size: cover;
 	 }
 
-	 .featured__buttons {
+	 .products__buttons {
 		position: absolute;
-		z-index: 1;
+		z-index: 5;
 		margin: 0 auto;
 		opacity: 0;
 		top: -50%;
@@ -1832,7 +1855,7 @@ section.range-slider {
 	 @include shadow(0 5px 8px rgba(0, 0, 0, 0.16));
 
 	 .image-wrapper {
-		.featured__buttons {
+		.products__buttons {
 		  opacity: 1;
 		  top: 45%;
 		}
@@ -1844,10 +1867,10 @@ section.range-slider {
 	 }
   }
 
-  .featured__text {
+  .products__text {
 	 padding: 19px 15px 21px;
 
-	 .featured__info {
+	 .products__info {
 		margin-bottom: 15px;
 		display: block;
 		text-decoration: none;
@@ -2152,6 +2175,9 @@ footer {
   .catalog__right {
 	 width: 100%;
 	 padding-left: 50px;
+	 .products {
+		margin: 0 -15px;
+	 }
   }
 
   .catalog__details-name::-webkit-details-marker {
@@ -2285,7 +2311,7 @@ footer {
 	 }
   }
 
-  .catalog__pager {
+  .products__pager {
 	 display: flex;
 	 align-items: center;
 	 justify-content: space-between;
@@ -2293,13 +2319,13 @@ footer {
 	 margin-bottom: 110px;
 	 padding-top: 43px;
 
-	 .catalog__pager-left {
+	 .products__pager-left {
 		.pager {
 		  float: left;
 		}
 	 }
 
-	 .catalog__pager-right {
+	 .products__pager-right {
 		.button {
 		  float: right;
 		}
@@ -2521,16 +2547,18 @@ footer {
   }
 
   .featured {
-	 display: flex;
-	 margin-bottom: 73px;
+	 .products{
+		display: flex;
+		margin-bottom: 73px;
+	 }
 
-	 .featured__info {
+	 .products__info {
 		font-size: 14px;
 		font-weight: 400;
 		text-transform: uppercase;
 	 }
 
-	 .featured__price {
+	 .products__price {
 		font-size: 16px;
 		font-weight: 700;
 		text-transform: uppercase;

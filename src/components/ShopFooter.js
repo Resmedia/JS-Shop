@@ -1,5 +1,5 @@
-Vue.component('shop-footer', {
-   template: `
+Vue.component("shop-footer", {
+  template: `
    <footer>
         <div class="footer-nav container">
             <div class="col-md-5">
@@ -159,5 +159,5 @@ Vue.component('shop-footer', {
             </div>
         </div>
     </footer>
-  `,
+  `
 });

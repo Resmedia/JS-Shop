@@ -1,8 +1,8 @@
-Vue.component('select-element', {
-  props: ['name', 'options'],
+Vue.component("select-element", {
+  props: ["name", "options"],
   data() {
     return {
-      selectHide: false,
+      selectHide: false
     };
   },
   template: `
@@ -20,20 +20,20 @@ Vue.component('select-element', {
             </option-element>
         </div>
   </div>
-  `,
+  `
 });
 
-Vue.component('option-element', {
-  props: ['option'],
+Vue.component("option-element", {
+  props: ["option"],
   data() {
     return {
-      section: this.option.section,
+      section: this.option.section
     };
   },
   template: `
   <div class="select__option" v-bind:class="[ section ? 'select__section-name' : '', option.className ? option.className : '' ]">
       {{option.name}}
   </div>
-  `,
+  `
 });
 /**/
