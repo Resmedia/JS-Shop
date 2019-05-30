@@ -79,13 +79,16 @@ Vue.component("cart", {
                <p class="cart-block__empty" v-if="!cartItems.length">
                  Cart is empty
                </p>
-               <cart-item 
-                   v-for="item of cartItems"
-                   :key="item.id"
-                   :img="item.img"
-                   :cart-item="item"
-                   @remove="remove"
-                >
+               <div class="drop-menu">
+                    <cart-item 
+                        v-for="item of cartItems"
+                        :key="item.id"
+                        :img="item.img"
+                        :cart-item="item"
+                        @remove="remove"
+                     >
+                     </cart-item>
+               </div>
                 </cart-item>
                 <div  v-if="calcSum > 0 && cartItems.length > 0" class="drop-menu__price">
                     TOTAL <span class="price__total">$ {{ calcSum }}</span>
