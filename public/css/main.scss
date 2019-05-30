@@ -1716,6 +1716,10 @@ section.range-slider {
 .main-block {
   padding-bottom: 113px;
 
+  .products{
+    overflow: hidden;
+  }
+
   .main-block__offer {
     margin-bottom: 100px;
     overflow: hidden;
