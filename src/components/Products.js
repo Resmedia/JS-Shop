@@ -38,6 +38,7 @@ Vue.component("products", {
     },
     showAll() {
       this.itemsPerPage = this.resultCount;
+      this.currentPage = 0;
     },
     setPage(pageNumber) {
       this.currentPage = pageNumber;
