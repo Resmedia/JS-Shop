@@ -1306,6 +1306,8 @@ section.range-slider {
 
 .main-block {
   padding-bottom: 113px; }
+  .main-block .products {
+    overflow: hidden; }
   .main-block .main-block__offer {
     margin-bottom: 100px;
     overflow: hidden;

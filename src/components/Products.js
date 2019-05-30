@@ -35,6 +35,9 @@ Vue.component("products", {
       let regexp = new RegExp(value, "i");
       this.filtered = this.products.filter(el => regexp.test(el.name));
     },
+    showAll() {
+      this.itemsPerPage = this.resultCount;
+    },
     setPage(pageNumber) {
       this.currentPage = pageNumber;
     },
@@ -85,7 +88,7 @@ Vue.component("products", {
               </ul>
               </nav>
               <div class="products__pager-right">
-                  <button class="button button-rose-transparent">
+                  <button v-on:click.self="showAll()" class="button button-rose-transparent">
                       View All
                   </button>
               </div>

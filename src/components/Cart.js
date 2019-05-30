@@ -21,8 +21,7 @@ Vue.component("cart", {
     }
   },
   mounted() {
-    this.$root.getJson(this.cartUrl)
-        .then(data => {
+    this.$root.getJson(this.cartUrl).then(data => {
       for (let el of data.contents) {
         this.cartItems.push(el);
       }
@@ -30,8 +29,7 @@ Vue.component("cart", {
   },
   methods: {
     addProduct(product) {
-      let find = this.cartItems
-          .find(el => el.id === product.id);
+      let find = this.cartItems.find(el => el.id === product.id);
       if (find) {
         this.$root
           .putJson(this.cartUrl + find.id, { quantity: 1 })
@@ -42,8 +40,7 @@ Vue.component("cart", {
           });
       } else {
         let prod = Object.assign({ quantity: 1 }, product);
-        this.$root.postJson(this.cartUrl, prod)
-            .then(data => {
+        this.$root.postJson(this.cartUrl, prod).then(data => {
           if (data.result) {
             this.cartItems.push(prod);
           }
