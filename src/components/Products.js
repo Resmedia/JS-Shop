@@ -1,4 +1,5 @@
 Vue.component("products", {
+  // TODO i understand that filter work anywhere with product component it index, view and products page
   props: ["type", "column", "pager"],
   data() {
     return {
@@ -98,13 +99,29 @@ Vue.component("products", {
 });
 Vue.component("product", {
   props: ["product", "type", "column"],
+	data() {
+		return {
+		  animated: false
+		}
+	},
+    methods: {
+		blink(event) {
+		  console.log(event);
+			event.target.firstChild.classList.add('animated');
+			setTimeout(() => event.target.firstChild.classList.remove('animated'), 500)
+		},
+    },
   template: `
       <div v-bind:class="column"> 
           <div class="products__item">
               <div class="image-wrapper">
                   <a :title="product.name" href="/view.html" class="active-zone"></a>
                   <div class="products__buttons">
-                      <button  @click="$root.$refs.shopHeader.$refs.cart.addProduct(product)" class="button button-transparent">
+                      <button
+                          @click="$root.$refs.shopHeader.$refs.cart.addProduct(product)"
+                          class="button button-transparent"
+                          v-on:click.self="blink"
+                       >
                           <img alt="basket" class="basket" src="/images/basket_white.svg">
                           Add to Cart
                       </button>

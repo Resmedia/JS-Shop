@@ -1783,7 +1783,7 @@ section.range-slider {
     display: inline-block;
     margin-top: 40px;
     left: 50%;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
 
     .icon-arrow-right {
       margin-left: 9px;
@@ -1828,6 +1828,9 @@ section.range-slider {
 .products__item {
   overflow: hidden;
   margin: 15px;
+  @include transition(all 300ms linear);
+  @include transform(scale(1, 1));
+
   .image-wrapper {
     position: relative;
     z-index: 3;
@@ -1858,7 +1861,7 @@ section.range-slider {
       opacity: 0;
       top: -50%;
       right: 0;
-      transform: translateY(-50%) translateX(-50%);
+      @include transform(translateY(-50%) translateX(-50%));
       @include transition(all 300ms linear);
 
       .button-transparent {
@@ -1903,7 +1906,7 @@ section.range-slider {
   }
 
   &:hover {
-    transform: scale(1.02, 1.02);
+    @include transform(scale(1.02, 1.02));
     @include shadow(0 5px 8px rgba(0, 0, 0, 0.16));
 
     .image-wrapper {
@@ -2650,11 +2653,15 @@ footer {
 
     .cart-list__info {
       .info__name {
+        color: $mainColor;
         font-size: 13px;
         display: block;
         font-weight: 400;
         text-transform: uppercase;
         margin-bottom: 11px;
+        &:hover{
+          color: $rose;
+        }
       }
 
       .info__stars {
@@ -2904,4 +2911,19 @@ footer {
   touch-action: none;
   cursor: not-allowed;
   opacity: 0.7;
+}
+.animated {
+  animation: circle 700ms;
+}
+
+@keyframes circle {
+  0% {
+    opacity: .9;
+    @include transform(translate(0, 0));
+
+  }
+  100% {
+    opacity: 0;
+    @include transform(translate(300%, -500%));
+  }
 }
