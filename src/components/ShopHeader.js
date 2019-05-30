@@ -20,16 +20,16 @@ Vue.component('shop-header', {
    <header class="header" v-bind:class="{ fixed: scrollEvent }">
       <div class="header__wrap">
           <div class="container header__content">
-            <div class="header__left brand">
-                <img class="logo" src="./images/logo.svg" alt="logo"/>
-                <div class="main-name">
-                    <a class="#" href="/" title="Main Page">
-                        BRAN<span class="text-rose">D</span>
-                    </a>
-                </div>
-                <filter-el></filter-el>
-            </div>
-            <div class="header__right">
+          <div class="header__left">
+              <a href="/" title="Main Page" class="brand">
+                  <img class="logo" src="./images/logo.svg" alt="logo"/>
+                  <div class="main-name">
+                     BRAN<span class="text-rose">D</span>
+                  </div>
+              </a>
+              <filter-el></filter-el>
+          </div>
+          <div class="header__right">
                 <cart ref="cart"></cart>
                 <div class="dropdown">
                     <button @click="showMenu = !showMenu" class="button button-rose">

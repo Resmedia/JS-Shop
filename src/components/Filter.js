@@ -92,7 +92,7 @@ Vue.component('filter-el', {
     };
   },
   template: `
-      <form action="" class="form-group" @submit.prevent="$parent.$parent.$refs.catalog.filter(userSearch)">
+      <form action="" class="form-group" @submit.prevent="$parent.$parent.$refs.products.filter(userSearch)">
          <div class="select select-mega">
          <select-element
             ref="selectElement"

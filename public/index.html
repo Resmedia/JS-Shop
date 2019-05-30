@@ -23,7 +23,25 @@
         <main-slider ref="mainSlider"></main-slider>
         <div class="main-block container">
             <shop-offer ref="shopOffer"></shop-offer>
-            <products-main ref="productsMain"></products-main>
+            <section class="main-block__featured">
+                 <div class="featured-name">
+                    Fetured Items
+                 </div>
+                 <div class="featured-anons">
+                    Shop for items based on what we featured in this week
+                 </div>
+                 <div class="row-15">
+                    <products
+                          ref="products"
+                          column="col-md-3"
+                          type="main"
+                    >
+                    </products>
+                 </div>
+                <a href="products.html" class="button button-rose main-block__button">
+                   Browse All Product <i class="icon-arrow-right"></i>
+                </a>
+            </section>
             <shop-merits ref="shopMerits"></shop-merits>
         </div>
         <main-additions ref="mainAdditions"></main-additions>
@@ -40,7 +58,7 @@
 <script src="/js/ShopMerits.js"></script>
 <script src="/js/MainSlider.js"></script>
 <script src="/js/MainAdditions.js"></script>
-<script src="/js/ProductsMain.js"></script>
+<script src="/js/Products.js"></script>
 <script src="/js/Filter.js"></script>
 <script src="/js/Error.js"></script>
 <script src="/js/Select.js"></script>
