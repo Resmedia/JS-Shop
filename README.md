@@ -1,6 +1,6 @@
 # WIP - work in progress!
 
-## Shop frontend prototype - only for view
+## Frontend shop prototype - only for view
 ````
 Author: Evgenii Rogozhuk
 School: GeekBrains
