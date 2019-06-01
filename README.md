@@ -9,7 +9,7 @@ Description: This is final school project on JS direction,
 light version of front shop with node.js server and vue.js
 ````
 ### To start the project
-*You needs to be inside `project` folder*
+*You need to be inside `project` folder*
 ```bash
 npm i          // Install all dependents
 
