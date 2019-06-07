@@ -1,4 +1,4 @@
-Vue.component("main-additions", {
+export const MainAdditions = {
   template: `
    <section class="main-additions">
         <div class="container">
@@ -37,4 +37,4 @@ Vue.component("main-additions", {
         </div>
     </section>
   `
-});
+};

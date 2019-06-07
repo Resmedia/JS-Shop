@@ -1,4 +1,4 @@
-Vue.component("bread-crumbs", {
+export const BreadCrumbs = {
   props: ["section", "crumbs"],
   template: `
    <div class="catalog-nav">
@@ -24,7 +24,7 @@ Vue.component("bread-crumbs", {
     </div>
 </div>
   `
-});
+};
 
 Vue.component("crumb", {
   props: ["crumb"],

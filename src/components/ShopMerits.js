@@ -1,4 +1,4 @@
-Vue.component("shop-merits", {
+export const ShopMerits = {
   template: `
    <section class="main-block__special">
        <img src="./images/discount.jpg" alt="special"/>
@@ -42,4 +42,4 @@ Vue.component("shop-merits", {
        </div>
    </section>
   `
-});
+};

@@ -1,22 +1,27 @@
-Vue.component("cart-page", {
-  data() {
-    return {
-      mainPath: this.$root.$refs.shopHeader.$refs,
-      countries: [
-        { id: 1, name: "USA" },
-        { id: 2, name: "Russia" },
-        { id: 3, name: "France" },
-        { id: 4, name: "Greece" },
-        { id: 5, name: "Japan" }
-      ],
-      state: [
-        { id: 0, name: "Saint-Petersburg" },
-        { id: 2, name: "Moscow" },
-        { id: 3, name: "Ekaterinburg" }
-      ]
-    };
-  },
-  template: `
+import {SelectElement} from "./Select.js";
+
+export const CartPage = {
+	data() {
+		return {
+			mainPath: this.$root.$refs.shopHeader.$refs,
+			countries: [
+				{id: 1, name: "USA"},
+				{id: 2, name: "Russia"},
+				{id: 3, name: "France"},
+				{id: 4, name: "Greece"},
+				{id: 5, name: "Japan"}
+			],
+			state: [
+				{id: 0, name: "Saint-Petersburg"},
+				{id: 2, name: "Moscow"},
+				{id: 3, name: "Ekaterinburg"}
+			]
+		};
+	},
+	components: {
+		'select-element': SelectElement,
+	},
+	template: `
    <div class="cart-page">
        <div class="cart-list">
           <div class="cart-list__column">
@@ -166,10 +171,10 @@ Vue.component("cart-page", {
         </div>
   </div>
   `
-});
+};
 Vue.component("cart-info", {
-  props: ["cartInfo"],
-  template: `
+	props: ["cartInfo"],
+	template: `
    <div class="column__item">
       <img :src="cartInfo.img" :alt="cartInfo.name" class="cart-list__image">
       <div class="cart-list__info">
@@ -187,16 +192,16 @@ Vue.component("cart-info", {
    `
 });
 Vue.component("cart-price", {
-  props: ["cartPrice"],
-  template: `
+	props: ["cartPrice"],
+	template: `
    <div class="column__item">
       $ {{cartPrice}}
    </div>
    `
 });
 Vue.component("cart-quantity", {
-  props: ["cartQuantity"],
-  template: `
+	props: ["cartQuantity"],
+	template: `
    <div class="column__item">
       <input
          min="1"
@@ -209,24 +214,24 @@ Vue.component("cart-quantity", {
    `
 });
 Vue.component("cart-shipping", {
-  props: ["cartShipping"],
-  template: `
+	props: ["cartShipping"],
+	template: `
    <div class="column__item">
       FREE
    </div>
    `
 });
 Vue.component("cart-total", {
-  props: ["cartTotal"],
-  template: `
+	props: ["cartTotal"],
+	template: `
    <div class="column__item">
       $ {{ cartTotal.quantity*cartTotal.price }}
    </div>
    `
 });
 Vue.component("cart-action", {
-  props: ["cartAction"],
-  template: `
+	props: ["cartAction"],
+	template: `
    <div class="column__item">
       <i @click="$emit('remove', cartAction)" class="icon-times-circle text-gray"></i>
    </div>

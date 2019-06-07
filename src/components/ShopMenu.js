@@ -1,4 +1,4 @@
-Vue.component("shop-menu", {
+export const ShopMenu = {
   data() {
     return {
       apiMenu: "/api/menu",
@@ -29,7 +29,7 @@ Vue.component("shop-menu", {
       </ul>
    </nav>
   `
-});
+};
 
 Vue.component("menu-one", {
   props: ["menu"],
@@ -86,65 +86,3 @@ Vue.component("last-item", {
       </li>
   `
 });
-
-/*
-* <li>
-              <div class="nav__link">
-                  Man
-                  <nav class="nav__drop-menu">
-                      <div class="nav__drop-section">
-                          <h3 class="drop-section__name">
-                              Man
-                          </h3>
-                          <ul>
-                              <li><a href="/products.html" class="drop-section__link"></a></li>
-                              <li><a href="/products.html" class="drop-section__link"></a></li>
-                              <li><a href="/products.html" class="drop-section__link"></a></li>
-                              <li><a href="/products.html" class="drop-section__link"></a></li>
-                              <li><a href="/products.html" class="drop-section__link"></a></li>
-                              <li><a href="/products.html" class="drop-section__link"></a></li>
-                              <li><a href="/products.html" class="drop-section__link"></a></li>
-                              <li><a href="/products.html" class="drop-section__link"></a></li>
-                              <li><a href="/products.html" class="drop-section__link"></a></li>
-                          </ul>
-                      </div>
-                      <div class="nav__drop-section">
-                          <h3 class="drop-section__name">
-                              Man
-                          </h3>
-                          <ul>
-                              <li><a href="/products.html" class="drop-section__link">Dresses</a></li>
-                              <li><a href="/products.html" class="drop-section__link">Tops</a></li>
-                              <li><a href="/products.html" class="drop-section__link">Sweaters/Knits</a></li>
-                              <li><a href="/products.html" class="drop-section__link">Jackets/Coats</a></li>
-                          </ul>
-                          <h3 class="drop-section__name">
-                              Man
-                          </h3>
-                          <ul>
-                              <li><a href="/products.html" class="drop-section__link">Dresses</a></li>
-                              <li><a href="/products.html" class="drop-section__link">Tops</a></li>
-                              <li><a href="/products.html" class="drop-section__link">Sweaters/Knits</a></li>
-                          </ul>
-                      </div>
-
-                      <div class="nav__drop-section">
-                          <h3 class="drop-section__name">
-                              Man
-                          </h3>
-                          <ul>
-                              <li><a href="/products.html" class="drop-section__link">Dresses</a></li>
-                              <li><a href="/products.html" class="drop-section__link">Tops</a></li>
-                              <li><a href="/products.html" class="drop-section__link">Sweaters/Knits</a></li>
-                              <li><a href="/products.html" class="drop-section__link">Jackets/Coats</a></li>
-                          </ul>
-                          <a href="/view.html" class="drop-section__sale">
-                              <img src="/images/sale.jpg" alt="" class="drop-section__sale-image" />
-                              <div class="drop-section__sale-text">
-                                  Super sale!
-                              </div>
-                          </a>
-                      </div>
-                  </nav>
-              </div>
-          </li>*/

@@ -1,33 +1,38 @@
-Vue.component("view-page", {
-  data() {
-    return {
-      color: [
-        {
-          id: 1,
-          className: "square-red",
-          name: "Red"
-        },
-        {
-          id: 2,
-          className: "square-blue",
-          name: "Blue"
-        },
-        {
-          id: 3,
-          className: "square-green",
-          name: "Green"
-        }
-      ],
-      size: [
-        { id: 1, name: "XXL" },
-        { id: 2, name: "XL" },
-        { id: 3, name: "L" },
-        { id: 4, name: "M" },
-        { id: 5, name: "S" }
-      ]
-    };
-  },
-  template: `
+import {SelectElement} from "./Select.js";
+
+export const ViewPage = {
+	data() {
+		return {
+			color: [
+				{
+					id: 1,
+					className: "square-red",
+					name: "Red"
+				},
+				{
+					id: 2,
+					className: "square-blue",
+					name: "Blue"
+				},
+				{
+					id: 3,
+					className: "square-green",
+					name: "Green"
+				}
+			],
+			size: [
+				{id: 1, name: "XXL"},
+				{id: 2, name: "XL"},
+				{id: 3, name: "L"},
+				{id: 4, name: "M"},
+				{id: 5, name: "S"}
+			]
+		};
+	},
+	components: {
+		'select-element': SelectElement,
+	},
+	template: `
   <div class="arrival-view">
       <div class="arrival__slider">
         <div class="arrival__slider-left">
@@ -117,4 +122,4 @@ Vue.component("view-page", {
     </div>
   </div>
   `
-});
+};

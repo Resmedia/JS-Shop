@@ -1,4 +1,4 @@
-Vue.component("shop-footer", {
+export const ShopFooter = {
   template: `
    <footer>
         <div class="footer-nav container">
@@ -160,4 +160,4 @@ Vue.component("shop-footer", {
         </div>
     </footer>
   `
-});
+};

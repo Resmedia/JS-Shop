@@ -1,59 +1,59 @@
-Vue.component("products", {
-  // TODO i understand that filter work anywhere with product component it index, view and products page
-  props: ["type", "column", "pager"],
-  data() {
-    return {
-      apiProducts: "/api/products",
-      products: [],
-      filtered: [],
-      currentPage: 0,
-      itemsPerPage: 6,
-      resultCount: 0
-    };
-  },
-  mounted() {
-    this.$parent.getJson(this.apiProducts).then(data => {
-      for (let item of data) {
-        if (!!this.type && item[this.type]) {
-          this.products.push(item);
-          this.filtered.push(item);
-        }
+export const Products = {
+	// TODO i understand that filter work anywhere with product component it index, view and products page
+	props: ["type", "column", "pager"],
+	data() {
+		return {
+			apiProducts: "/api/products",
+			products: [],
+			filtered: [],
+			currentPage: 0,
+			itemsPerPage: 6,
+			resultCount: 0
+		};
+	},
+	mounted() {
+		this.$parent.getJson(this.apiProducts).then(data => {
+			for (let item of data) {
+				if (!!this.type && item[this.type]) {
+					this.products.push(item);
+					this.filtered.push(item);
+				}
 
-        if (!this.type) {
-          this.products.push(item);
-          this.filtered.push(item);
-        }
-      }
-    });
-  },
-  computed: {
-    totalPages() {
-      return Math.ceil(this.resultCount / this.itemsPerPage);
-    }
-  },
-  methods: {
-    filter(value) {
-      let regexp = new RegExp(value, "i");
-      this.filtered = this.products.filter(el => regexp.test(el.name));
-    },
-    showAll() {
-      this.itemsPerPage = this.resultCount;
-      this.currentPage = 0;
-    },
-    setPage(pageNumber) {
-      this.currentPage = pageNumber;
-    },
-    pagination(list) {
-      this.resultCount = list.length;
-      if (this.currentPage >= this.totalPages) {
-        this.currentPage = this.totalPages;
-      }
+				if (!this.type) {
+					this.products.push(item);
+					this.filtered.push(item);
+				}
+			}
+		});
+	},
+	computed: {
+		totalPages() {
+			return Math.ceil(this.resultCount / this.itemsPerPage);
+		}
+	},
+	methods: {
+		filter(value) {
+			let regexp = new RegExp(value, "i");
+			this.filtered = this.products.filter(el => regexp.test(el.name));
+		},
+		showAll() {
+			this.itemsPerPage = this.resultCount;
+			this.currentPage = 0;
+		},
+		setPage(pageNumber) {
+			this.currentPage = pageNumber;
+		},
+		pagination(list) {
+			this.resultCount = list.length;
+			if (this.currentPage >= this.totalPages) {
+				this.currentPage = this.totalPages;
+			}
 
-      const index = this.currentPage * this.itemsPerPage;
-      return list.slice(index, index + this.itemsPerPage);
-    }
-  },
-  template: `
+			const index = this.currentPage * this.itemsPerPage;
+			return list.slice(index, index + this.itemsPerPage);
+		}
+	},
+	template: `
       <div class="products">
           <product
              v-for="product of !type ? pagination(filtered) : filtered"
@@ -97,22 +97,22 @@ Vue.component("products", {
           </div>
       </div>
    `
-});
+};
+
 Vue.component("product", {
-  props: ["product", "type", "column"],
+	props: ["product", "type", "column"],
 	data() {
 		return {
-		  animated: false
+			animated: false
 		}
 	},
-    methods: {
+	methods: {
 		blink(event) {
-		  console.log(event);
 			event.target.firstChild.classList.add('animated');
 			setTimeout(() => event.target.firstChild.classList.remove('animated'), 500)
 		},
-    },
-  template: `
+	},
+	template: `
       <div v-bind:class="column"> 
           <div class="products__item">
               <div class="image-wrapper">

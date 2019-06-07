@@ -1,4 +1,4 @@
-Vue.component("shop-merits-page", {
+export const ShopMeritsPage = {
   template: `
    <section class="page-block__special">
     <div class="container">
@@ -45,4 +45,4 @@ Vue.component("shop-merits-page", {
     </div>
 </section>
   `
-});
+};

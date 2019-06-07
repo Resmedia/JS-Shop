@@ -1,4 +1,4 @@
-Vue.component("cart", {
+export const Cart = {
   data() {
     return {
       showCart: false,
@@ -100,7 +100,7 @@ Vue.component("cart", {
          </div>
       </div>
   `
-});
+};
 Vue.component("cart-item", {
   props: ["cartItem", "img"],
   template: `

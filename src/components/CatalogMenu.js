@@ -1,4 +1,4 @@
-Vue.component("catalog-menu", {
+export const CatalogMenu = {
   template: `
   <aside class="catalog__left">
         <details open class="catalog__details">
@@ -143,4 +143,4 @@ Vue.component("catalog-menu", {
         </details>
     </aside>
   `
-});
+};

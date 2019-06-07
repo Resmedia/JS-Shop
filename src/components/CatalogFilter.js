@@ -1,4 +1,4 @@
-Vue.component("catalog-filter", {
+export const CatalogFilter = {
   data() {
     return {};
   },
@@ -136,4 +136,4 @@ Vue.component("catalog-filter", {
           </div>
       </div>
    `
-});
+};

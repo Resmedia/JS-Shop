@@ -1,22 +1,28 @@
-Vue.component("shop-header", {
-  data() {
-    return {
-      showMenu: false,
-      scrollEvent: false
-    };
-  },
-  mounted() {
-    document.addEventListener("scroll", this.handleScroll);
-  },
-  beforeDestroy() {
-    document.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      this.scrollEvent = window.scrollY > 150;
-    }
-  },
-  template: `
+import {Cart} from './Cart.js';
+import {FilterEl} from './Filter.js';
+export const ShopHeader = {
+	data() {
+		return {
+			showMenu: false,
+			scrollEvent: false
+		};
+	},
+	components: {
+		'filter-el': FilterEl,
+		'cart': Cart,
+	},
+	mounted() {
+		document.addEventListener("scroll", this.handleScroll);
+	},
+	beforeDestroy() {
+		document.removeEventListener("scroll", this.handleScroll);
+	},
+	methods: {
+		handleScroll() {
+			this.scrollEvent = window.scrollY > 150;
+		}
+	},
+	template: `
    <header class="header" v-bind:class="{ fixed: scrollEvent }">
       <div class="header__wrap">
           <div class="container header__content">
@@ -53,4 +59,4 @@ Vue.component("shop-header", {
       </div>
     </header>
   `
-});
+};

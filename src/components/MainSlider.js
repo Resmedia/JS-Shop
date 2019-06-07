@@ -1,4 +1,4 @@
-Vue.component("main-slider", {
+export const MainSlider = {
   template: `
    <div class="slider-block">
        <div class="container">
@@ -14,4 +14,4 @@ Vue.component("main-slider", {
        </div>
    </div>
   `
-});
+};

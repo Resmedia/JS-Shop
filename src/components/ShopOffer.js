@@ -1,4 +1,4 @@
-Vue.component("shop-offer", {
+export const ShopOffer = {
   template: `
    <section class="main-block__offer">
        <div class="row-10">
@@ -53,4 +53,4 @@ Vue.component("shop-offer", {
        </div>
    </section>
   `
-});
+};

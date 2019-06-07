@@ -1,4 +1,4 @@
-Vue.component("select-element", {
+export const SelectElement = {
   props: ["name", "options"],
   data() {
     return {
@@ -21,7 +21,7 @@ Vue.component("select-element", {
         </div>
   </div>
   `
-});
+};
 
 Vue.component("option-element", {
   props: ["option"],
@@ -36,4 +36,4 @@ Vue.component("option-element", {
   </div>
   `
 });
-/**/
+
